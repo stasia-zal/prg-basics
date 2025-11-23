@@ -1,0 +1,34 @@
+test_p1 (__main__.Test.test_p1) ... ok
+test_p10 (__main__.Test.test_p10) ... ERROR
+test_p2 (__main__.Test.test_p2) ... ok
+test_p3 (__main__.Test.test_p3) ... ok
+test_p4 (__main__.Test.test_p4) ... ok
+test_p5 (__main__.Test.test_p5) ... ok
+test_p6 (__main__.Test.test_p6) ... ok
+test_p7 (__main__.Test.test_p7) ... FAIL
+test_p8 (__main__.Test.test_p8) ... ok
+test_p9 (__main__.Test.test_p9) ... ok
+
+======================================================================
+ERROR: test_p10 (__main__.Test.test_p10)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\User\OneDrive - uek.krakow.pl\Desktop\uni\czwartek\prg-basics\06-Test1\check-test1-ZICSS1-1112.py", line 66, in test_p10
+    import p10
+  File "c:\Users\User\OneDrive - uek.krakow.pl\Desktop\uni\czwartek\prg-basics\06-Test1\p10.py", line 16
+    if 'm' in time2:
+IndentationError: expected an indented block after 'if' statement on line 15
+
+======================================================================
+FAIL: test_p7 (__main__.Test.test_p7)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\User\OneDrive - uek.krakow.pl\Desktop\uni\czwartek\prg-basics\06-Test1\check-test1-ZICSS1-1112.py", line 49, in test_p7
+    self.assertEqual(p7.f(1,5),12)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+AssertionError: 5 != 12
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.017s
+
+FAILED (failures=1, errors=1)
