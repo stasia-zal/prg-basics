@@ -11,10 +11,9 @@ def twoDtooneD(arr):
     for row in arr:
         for item in row:
                 newarr.append(item)
-    for a in newarr :
-        for item in a:
-            print(f"{item:1}", end=" ")  
-        print()
+    print(newarr)
 
 
 twoDtooneD(a)
+twoDtooneD(b)
+twoDtooneD(c)
