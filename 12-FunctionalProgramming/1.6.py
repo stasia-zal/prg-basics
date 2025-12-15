@@ -1,0 +1,5 @@
+dis=int(input('Enter distance in km: '))
+hour=int(input('Enter number of travel hours: '))
+min=int(input('Enter number of travel minutes: '))
+avg_speed=lambda distance,hours,minutes:distance/(hours+minutes/60)
+print(f'Average speed: {avg_speed(dis,hour,min):.1f} km/h ')

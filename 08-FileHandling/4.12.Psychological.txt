@@ -1,0 +1,3 @@
+Title,Author,Genre,Year
+Crime and Punishment,Fyodor Dostoevsky,Psychological,1866
+American Psycho,Bret Easton Ellis,Psychological,1991
