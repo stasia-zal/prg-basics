@@ -1,11 +1,19 @@
-import json
-def f(years, course, average_grade):
-    count=0
-    with open('data.json','r',encoding='utf-8') as file:
-        data=json.load(file)
-    for student in data:
-        if int(student['year'])>=years:
-            if student['course']==course:
-                if int(student['average'])>=average_grade:
-                    count+=1
-    return count
+import re
+
+def f(addr):
+    key=r'[A-Za-z]{1,2}[\d]{1,4}'
+    a=re.fullmatch(key,addr)
+    if a==None:
+        return False
+    else:
+        return True
+
+
+if __name__=='__main__':
+    print(f('A4'))
+    print(f('a4'))
+    print(f('4a'))
+    print(f('bC123'))
+    print(f('bcd555'))
+    print(f('g80915'))
+    

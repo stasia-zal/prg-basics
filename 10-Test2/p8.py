@@ -1,21 +1,19 @@
-import queue
-def f(expressions):
-    q=queue.LifoQueue()
-    expr=expressions.split()
-    for char in expr:
-        if char.isdigit():
-            q.put(char)
-        elif char=='=':
-            return q.get()
-        else:
-            b=int(q.get())
-            a=int(q.get())
-            if char=='+':
-                q.put(a+b)
-            if char=='-':
-                q.put(a-b)
-    return q.get()
 
-print(f("2 3 +"))
-print(f("2 6 + 4 5 - +"))
-print(f("11 7 + 15 - 14 +"))
+def f(c):
+    game='AKQJT98765432'
+    a=[]
+    for carr in game:
+        a.append(carr)
+    for card in c:
+        if card in a:
+            a.remove(card)
+        else:
+            return card
+    for res in a:
+        return res
+
+
+
+if __name__=='__main__':
+    print(f("AKQJT8765432"))
+    print(f('4765329AKQJT'))

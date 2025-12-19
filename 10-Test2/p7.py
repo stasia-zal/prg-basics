@@ -1,10 +1,11 @@
-import re
-def f(array):
-    count=0
-    key=r'[a-z\d_]{4,12}'
-    for item in array:
-        if re.fullmatch(key,item):
-            count+=1
-    return count
 
-print(f(["uek","water_7_x","anna.may","a_b_c_d_e_f"]))
+def f(array2D):
+    people=0
+    for stop in array2D:
+        people+=stop[0]-stop[1]
+    return people
+
+
+if __name__=='__main__':
+    print(f([[3,0]]))
+    print(f([[3,0],[6,1]]))

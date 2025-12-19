@@ -1,26 +1,21 @@
-# 23:17
+import queue
 
-def f(player1,player2):
-    cards=['T','J','Q','K','A']
-    pl1=0
-    pl2=0
-    for card in player1:
-        if card.isdigit():
-            pl1+=int(card)
-        elif card in cards:
-            pl1+=10
-    for card in player2:
-        if card.isdigit():
-            pl2+=int(card)
-        elif card in cards:
-            pl2+=10
-    if pl1>=pl2:
-        return True
-    else: return False
-
-
-
-
-if __name__ == '__main__':
-    print( f('AJ972',"AQT72") ) 
-    print( f("9532","K8") ) 
+def f(rpn_exp):
+    exp=rpn_exp.split()
+    stack=queue.LifoQueue()
+    for item in exp:
+        if item.isdigit():
+            stack.put(item)
+        else:
+            b=int(stack.get())
+            a=int(stack.get())
+            if item=='*':
+                stack.put(a*b)
+            if item=='%':
+                stack.put(a%b)
+    return stack.get()
+            
+if __name__=='__main__':
+    print(f('5 4 *'))
+    print(f('2 6 % 4 5 * *'))
+    print(f('11 7 % 15 * 14 %'))
