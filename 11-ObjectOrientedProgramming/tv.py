@@ -19,8 +19,17 @@ class TV:
             print(str(count)+'.',item)
             count+=1
         print()
+    def increase_volume(self):
+        if self.volume<10:
+            self.volume+=1
+    def decrease_volume(self):
+        if self.volume>0:
+            self.volume-=1
     def show_status(self):
         print(f'Tv is on: {self.is_on}')
         if self.is_on:
             if self.channels:
                 print(f'Current channel {self.channel_no} ({self.channels[self.channel_no-1]})')
+        print(f'Volume is set to: {self.volume}')
+
+

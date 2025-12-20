@@ -17,6 +17,11 @@ def main():
     tv.show_status()
     tv.turn_off()
     tv.show_status()
+    tv.increase_volume()
+    tv.increase_volume()
+    tv.show_status()
+    tv.decrease_volume()
+    tv.show_status()
 
 
 if __name__ == "__main__":
