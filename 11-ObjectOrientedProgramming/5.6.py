@@ -1,3 +1,0 @@
-import bank 
-def main():
-    
