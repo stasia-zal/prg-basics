@@ -1,5 +1,5 @@
 test_p1 (__main__.Test.test_p1) ... ok
-test_p10 (__main__.Test.test_p10) ... ERROR
+test_p10 (__main__.Test.test_p10) ... ok
 test_p2 (__main__.Test.test_p2) ... ok
 test_p3 (__main__.Test.test_p3) ... ok
 test_p4 (__main__.Test.test_p4) ... ok
@@ -7,28 +7,45 @@ test_p5 (__main__.Test.test_p5) ... ok
 test_p6 (__main__.Test.test_p6) ... ok
 test_p7 (__main__.Test.test_p7) ... FAIL
 test_p8 (__main__.Test.test_p8) ... ok
-test_p9 (__main__.Test.test_p9) ... ok
-
-======================================================================
-ERROR: test_p10 (__main__.Test.test_p10)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\User\OneDrive - uek.krakow.pl\Desktop\uni\czwartek\prg-basics\06-Test1\check-test1-ZICSS1-1112.py", line 66, in test_p10
-    import p10
-  File "c:\Users\User\OneDrive - uek.krakow.pl\Desktop\uni\czwartek\prg-basics\06-Test1\p10.py", line 16
-    if 'm' in time2:
-IndentationError: expected an indented block after 'if' statement on line 15
+test_p9 (__main__.Test.test_p9) ... FAIL
 
 ======================================================================
 FAIL: test_p7 (__main__.Test.test_p7)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "c:\Users\User\OneDrive - uek.krakow.pl\Desktop\uni\czwartek\prg-basics\06-Test1\check-test1-ZICSS1-1112.py", line 49, in test_p7
-    self.assertEqual(p7.f(1,5),12)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
-AssertionError: 5 != 12
+  File "c:\Users\User\OneDrive - uek.krakow.pl\Desktop\uni\czwartek\prg-basics\testtttt\check-test3-ZICSS1-1112.py", line 99, in test_p7
+    self.assertEqual(p7.f(files2), ["img2", "img10", "img11"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['img2', 'img11', 'img10'] != ['img2', 'img10', 'img11']
+
+First differing element 1:
+'img11'
+'img10'
+
+- ['img2', 'img11', 'img10']
++ ['img2', 'img10', 'img11']
+
+======================================================================
+FAIL: test_p9 (__main__.Test.test_p9)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\User\OneDrive - uek.krakow.pl\Desktop\uni\czwartek\prg-basics\testtttt\check-test3-ZICSS1-1112.py", line 133, in test_p9
+    self.assertEqual(p9.f(cars2, 1), [{"AA1": 50}, {"BB2": 200}, {"CC3": 250}])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [{'DB444': 341}, {'KR333': 138}, {'MC222': 412}, {'WL555': 497}] != [{'AA1': 50}, {'BB2': 200}, {'CC3': 250}]
+
+First differing element 0:
+{'DB444': 341}
+{'AA1': 50}
+
+First list contains 1 additional elements.
+First extra element 3:
+{'WL555': 497}
+
+- [{'DB444': 341}, {'KR333': 138}, {'MC222': 412}, {'WL555': 497}]
++ [{'AA1': 50}, {'BB2': 200}, {'CC3': 250}]
 
 ----------------------------------------------------------------------
-Ran 10 tests in 0.024s
+Ran 10 tests in 0.014s
 
-FAILED (failures=1, errors=1)
+FAILED (failures=2)
